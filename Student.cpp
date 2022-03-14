@@ -1,12 +1,17 @@
 #include "Student.h"
 #include <iostream>
+#include <string.h>
+using namespace std;
 
 // Assign studentId and name
-Student::assignDetails() {
-  
+void Student::assignDetails(int sNo, char sName[]) {
+  studentID = sNo;
+
+  strcpy(name, sName);
 }
 
 // Display StudentId and Name
-Student::display() {
-  
+void Student::display() {
+  cout << "Student ID is " << studentID << endl;
+  cout << "Student name is " << name << endl;
 }
